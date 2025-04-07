@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.bitok.zawadimart.ui.screens.about.AboutScreen
 import com.bitok.zawadimart.ui.screens.home.HomeScreen
+import com.bitok.zawadimart.ui.screens.intent.IntentScreen
 import com.bitok.zawadimart.ui.screens.item.ItemScreen
 import com.bitok.zawadimart.ui.screens.start.StartScreen
 
@@ -35,6 +36,9 @@ fun AppNavHost(
         }
         composable(ROUT_START) {
             StartScreen(navController)
+        }
+        composable(ROUT_INTENT) {
+            IntentScreen(navController)
         }
 
 
