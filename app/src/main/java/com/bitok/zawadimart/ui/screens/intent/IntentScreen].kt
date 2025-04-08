@@ -154,7 +154,7 @@ fun IntentScreen(navController: NavController){
             onClick = {
                 val shareIntent = Intent(Intent.ACTION_SEND)
                 shareIntent.type = "text/plain"
-                shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("akinyiglory2@gmail.com"))
+                shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("bitokenock38@gmail.com"))
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "subject")
                 shareIntent.putExtra(Intent.EXTRA_TEXT, "Hello, this is the email body")
                 mContext.startActivity(shareIntent)
