@@ -113,7 +113,9 @@ fun ItemScreen(navController: NavController){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Column (modifier = Modifier.verticalScroll(rememberScrollState())){  //Row
+        Column (modifier = Modifier.verticalScroll(rememberScrollState())){
+
+            //Row
             Row (modifier = Modifier.padding(start = 20.dp)){
                 Image(
                     painter = painterResource(R.drawable.hood),
