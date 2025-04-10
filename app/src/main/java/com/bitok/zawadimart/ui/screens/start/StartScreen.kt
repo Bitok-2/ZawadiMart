@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.bitok.zawadimart.R
+import com.bitok.zawadimart.navigation.ROUT_DASHBOARD
 import com.bitok.zawadimart.navigation.ROUT_ITEM
 import com.bitok.zawadimart.ui.theme.newOrange
 
@@ -74,7 +75,7 @@ fun StartScreen(navController: NavController){
 
         Button(
             onClick = {
-                navController.navigate(ROUT_ITEM)
+                navController.navigate(ROUT_DASHBOARD)
             },
             colors = ButtonDefaults.buttonColors(newOrange),
             shape = RoundedCornerShape(10.dp),
