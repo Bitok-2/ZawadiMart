@@ -10,6 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import com.bitok.zawadimart.ui.screens.about.AboutScreen
 import com.bitok.zawadimart.ui.screens.crypto.CryptoScreen
 import com.bitok.zawadimart.ui.screens.dashboard.DashboardScreen
+import com.bitok.zawadimart.ui.screens.form.FormScreen
 import com.bitok.zawadimart.ui.screens.home.HomeScreen
 import com.bitok.zawadimart.ui.screens.intent.IntentScreen
 import com.bitok.zawadimart.ui.screens.item.ItemScreen
@@ -55,6 +56,9 @@ fun AppNavHost(
         }
         composable(ROUT_CRYPTO) {
             CryptoScreen(navController)
+        }
+        composable(ROUT_FORM) {
+           FormScreen(navController)
         }
 
 

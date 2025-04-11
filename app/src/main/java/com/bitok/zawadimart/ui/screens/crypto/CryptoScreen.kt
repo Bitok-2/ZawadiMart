@@ -2,6 +2,7 @@ package com.bitok.zawadimart.ui.screens.crypto
 
 import android.content.Intent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -57,6 +58,7 @@ import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.bitok.zawadimart.R
+import com.bitok.zawadimart.navigation.ROUT_ABOUT
 import com.bitok.zawadimart.navigation.ROUT_HOME
 import com.bitok.zawadimart.ui.theme.newOrange
 
@@ -142,8 +144,9 @@ fun CryptoScreen(navController: NavController){
                         fontSize = 15.sp
 
                     )
-
                 }
+
+
 
 
 
@@ -151,14 +154,19 @@ fun CryptoScreen(navController: NavController){
 
                 Spacer(modifier = Modifier.height(20.dp))
                 //Row
-                Row() {
+                Row (modifier = Modifier.padding(start = 20.dp)){
+
+
                     //Card1
-                    Card(modifier = Modifier.width(150.dp).height(180.dp)) {
-                        Column(
+                    Card (
+                        modifier = Modifier.width(150.dp).height(180.dp).clickable { navController.navigate(
+                            ROUT_HOME) }
+                    ){
+                        Column (
                             modifier = Modifier.fillMaxSize(),
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.Center
-                        ) {
+                        ){
                             Image(
                                 painter = painterResource(R.drawable.home),
                                 contentDescription = "shopping",
@@ -166,49 +174,40 @@ fun CryptoScreen(navController: NavController){
                             )
                             Text(text = "Home", fontSize = 15.sp)
                         }
-                        //Card2
-                        Card(modifier = Modifier.width(150.dp).height(180.dp)) {
-                            Column(
-                                modifier = Modifier.fillMaxSize(),
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                verticalArrangement = Arrangement.Center
-                            ) {
-                                Image(
-                                    painter = painterResource(R.drawable.home),
-                                    contentDescription = "shopping",
-                                    modifier = Modifier.size(100.dp)
-                                )
-                                Text(text = "Home", fontSize = 15.sp)
-                            }
-
-                        }
-                        //End of Card2
-
-                        //Card3
-                        Card(modifier = Modifier.width(150.dp).height(180.dp)) {
-                            Column(
-                                modifier = Modifier.fillMaxSize(),
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                verticalArrangement = Arrangement.Center
-                            ) {
-                                Image(
-                                    painter = painterResource(R.drawable.home),
-                                    contentDescription = "shopping",
-                                    modifier = Modifier.size(100.dp)
-                                )
-                                Text(text = "Home", fontSize = 15.sp)
-                            }
-
-                        }
-                        //End ofCard3
-
-
                     }
-                    //End of Row
+                    //End of Card1
+                    Spacer(modifier = Modifier.width(20.dp))
+
+
+                    //Card2
+                    Card (
+                        modifier = Modifier.width(150.dp).height(180.dp).clickable { navController.navigate(
+                            ROUT_ABOUT
+                        ) }
+                    ){
+                        Column (
+                            modifier = Modifier.fillMaxSize(),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ){
+                            Image(
+                                painter = painterResource(R.drawable.about),
+                                contentDescription = "shopping",
+                                modifier = Modifier.size(100.dp)
+                            )
+                            Text(text = "About us", fontSize = 15.sp)
+                        }
+                    }
+                    //End of Card2
 
 
                 }
+                    //End of Row
+
+
+
             }
+
         }
     )
 
